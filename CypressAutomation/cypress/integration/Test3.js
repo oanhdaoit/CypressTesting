@@ -30,8 +30,12 @@ cy.wait(2000)
 cy.get('div.cart-preview button').click()
 cy.wait(2000)
 cy.contains('Place Order').click()
-cy.wait(2000)
-//cy.get('div.products select').click()
+cy.wait(4000)
+//Choose 1 option in list dropdown with value: Vietnam
+cy.get('div.products div select').select('Vietnam') 
+cy.get('input.chKAgree').click()
+cy.contains('Proceed').click()
+
 }  )
  
  
