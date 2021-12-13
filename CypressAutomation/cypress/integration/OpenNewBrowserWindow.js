@@ -1,6 +1,6 @@
 ///<reference types="Cypress"/>
 describe('My action',function(){ 
-    //Check open new Browser Window (doing)
+    //Check open new Browser Window 
     it('Handling new Browser Window', function () {
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
         cy.window().then((win) => {
@@ -14,7 +14,7 @@ describe('My action',function(){
         cy.get('h2')
             .should('have.text', 'Featured Courses')
     })    
-       //Check open new Browser Window (doing) w2
+       //Check open new Browser Window  w2
     it.only('Handling new Browser Window w2', ()=> {
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
         const pop_url="http://www.qaclickacademy.com/"
