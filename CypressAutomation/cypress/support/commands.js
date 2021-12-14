@@ -12,6 +12,15 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
+Cypress.Commands.add('SelectProduct', (productName) => { 
+    //click add button with name "Blackberry"
+    cy.get('h4.card-title').each(($Valu,index,$list)=>{
+        if($Valu.text().includes(productName)) {
+            cy.get('button[class*="info"]').eq(index).click()
+        }
+    })
+})
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
